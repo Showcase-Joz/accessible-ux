@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <Accessible-UX></Accessible-UX>
+    </title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper__header">
+            <h3>Contact Form</h3>
+        </div>
+        <form action="" class="container__form" role="form" aria-label="Purchase a gift card">
+            <fieldset class="wrapper__form basic-contact-details">
+                <legend>Basic details</legend>
+                <div class="grid-row">
+                    <label for="input-name"><span>Name</span>
+                        <input type="text" id="input-name" class="form__input-name">
+                    </label>
+                </div>
+                <div class="grid-row">
+                    <label for="input-email"><span>Email</span>
+                        <input type="email" id="input-email" class="form__input-email" required>
+                    </label>
+                </div>
+                <div class="grid-row">
+                    <label for="input-phone"><span>Phone</span>
+                        <input type="number" class="form__input-number" id="input-phone">
+                    </label>
+                </div>
+                <div class="grid-row grid-row__button">
+                    <input type="submit" value="Send" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

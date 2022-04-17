@@ -1,0 +1,289 @@
+.container {
+  margin: 0 auto;
+  min-width: 200px;
+  font-family: sans-serif;
+  background: wheat;
+}
+
+.container .wrapper__header {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.container .wrapper__header h3 {
+  font-size: 1.35rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+  text-decoration-thickness: 0.15rem;
+}
+
+form.container__form {
+  max-width: MIN(1000px, 45vw);
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin: 2rem auto;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (minmax(80px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 1fr;
+  -ms-grid-columns: minmax(auto, 1fr);
+      grid-template-columns: minmax(auto, 1fr);
+  place-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: 1px solid slateblue;
+}
+
+@media only screen and (min-width: 800px) {
+  form.container__form fieldset.wrapper__form.basic-contact-details {
+    -ms-grid-rows: (minmax(66px, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(66px, 1fr));
+  }
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details legend {
+  margin: auto 30px auto auto;
+  padding: 0 10px;
+  font-family: monospace;
+  color: slateblue;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row {
+  width: 95%;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label {
+  text-transform: uppercase;
+  height: 40px;
+}
+
+@media only screen and (min-width: 800px) {
+  form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label input {
+  display: block;
+  width: 0%;
+  margin-top: 0.1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: inherit;
+  -moz-appearance: textfield;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label input::-webkit-outer-spin-button, form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media only screen and (min-width: 800px) {
+  form.container__form fieldset.wrapper__form.basic-contact-details .grid-row label input {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row__button input[type="submit"] {
+  all: unset;
+  padding: 0.55rem 1.7rem;
+  color: white;
+  background-color: slateblue;
+  cursor: pointer;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form.container__form fieldset.wrapper__form.basic-contact-details .grid-row__button input[type="submit"]:hover {
+  background-color: red;
+}
+
+@media only screen and (min-width: 800px) {
+  form.container__form fieldset.wrapper__form.basic-contact-details .grid-row__button input[type="submit"] {
+    padding: 0.55rem 5vw;
+  }
+}
+
+/*
+Nice to have, but not essential. These styles are purely for a 
+*/
+.grid-row label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row label {
+    position: relative;
+  }
+}
+
+.grid-row label span {
+  z-index: 9;
+  position: absolute;
+  -webkit-transition: font-size 0.5s ease-out 0.3s, -webkit-transform 0.4s cubic-bezier(0.1, -0.32, 0.2, 0);
+  transition: font-size 0.5s ease-out 0.3s, -webkit-transform 0.4s cubic-bezier(0.1, -0.32, 0.2, 0);
+  transition: font-size 0.5s ease-out 0.3s, transform 0.4s cubic-bezier(0.1, -0.32, 0.2, 0);
+  transition: font-size 0.5s ease-out 0.3s, transform 0.4s cubic-bezier(0.1, -0.32, 0.2, 0), -webkit-transform 0.4s cubic-bezier(0.1, -0.32, 0.2, 0);
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row label span {
+    position: relative;
+  }
+}
+
+.grid-row label input {
+  background: slateblue;
+  color: white;
+  border: none;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, slateblue), color-stop(50%, transparent)) right;
+  background: linear-gradient(to left, slateblue 50%, transparent 50%) right;
+  background-size: 200%;
+  text-indent: 3px;
+  font-size: 1.2rem;
+  -webkit-transition: color 0.1s ease-in, background-position 0.5s ease-in, text-indent .2s ease-in;
+  transition: color 0.1s ease-in, background-position 0.5s ease-in, text-indent .2s ease-in;
+}
+
+.grid-row label input:focus {
+  color: slateblue;
+  background-position: left;
+  -webkit-transition: background-position 0.4s ease-in, color 0.1s ease-in;
+  transition: background-position 0.4s ease-in, color 0.1s ease-in;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row label input:focus {
+    text-indent: unset;
+    -webkit-transition: text-indent .2s ease-in;
+    transition: text-indent .2s ease-in;
+  }
+}
+
+.grid-row label input::-moz-selection {
+  background-color: slateblue;
+  color: white;
+  font-weight: 500;
+}
+
+.grid-row label input::selection {
+  background-color: slateblue;
+  color: white;
+  font-weight: 500;
+}
+
+.grid-row label::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: slateblue;
+  -webkit-transition: width 0.5s ease-in;
+  transition: width 0.5s ease-in;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row label::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.grid-row label:focus-within::after {
+  width: 100%;
+  -webkit-transition: width 0.4s ease-in;
+  transition: width 0.4s ease-in;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row label:focus-within::after {
+    right: 5px;
+  }
+}
+
+.grid-row:focus-within span {
+  z-index: 0;
+  font-size: 0.75rem;
+  -webkit-transform: translateY(-125%);
+          transform: translateY(-125%);
+  -webkit-transition: font-size 0.5s ease-out 0.3s, width 0.5, -webkit-transform 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+  transition: font-size 0.5s ease-out 0.3s, width 0.5, -webkit-transform 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+  transition: transform 0.5s cubic-bezier(0.1, -0.6, 0.2, 0), font-size 0.5s ease-out 0.3s, width 0.5;
+  transition: transform 0.5s cubic-bezier(0.1, -0.6, 0.2, 0), font-size 0.5s ease-out 0.3s, width 0.5, -webkit-transform 0.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row:focus-within span {
+    -webkit-transition: font-size 0.5s ease-out 0.3s;
+    transition: font-size 0.5s ease-out 0.3s;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+.grid-row:focus-within input {
+  background-color: transparent;
+  left: -5px;
+  position: relative;
+  opacity: 1;
+  outline: none;
+  border: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-row:focus-within input {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+/*# sourceMappingURL=style.css.map */
